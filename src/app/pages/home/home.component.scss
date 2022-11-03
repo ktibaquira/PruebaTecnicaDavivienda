@@ -181,6 +181,7 @@ a {
   overflow: hidden;
   transform: scale(0.5) translateZ(0px);
   text-decoration: none;
+  pointer-events: none;
 }
 a div {
   height: 100%;
