@@ -1,0 +1,148 @@
+.pag{
+  width: 375px;
+  height: 646px;
+    top: 0px;
+    left: 0px;
+}
+.contenedor {
+  background: #ededed;
+  margin: 0;
+  height: auto;
+}
+.barra {
+  display: inline-flex;
+  grid-template-columns: repeat(3, 1fr);
+  background: #dd141d;
+  width: 100%;
+  height: auto;
+}
+
+.atras {
+  margin-top: 21px;
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+
+}
+.titulo {
+  width: 200%;
+  margin-left: -10px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 28px;
+}
+
+.cerrar {
+  margin-top: 25px;
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+}
+//contenido *****************************
+.ayuda {
+  display: grid;
+  position: relative;
+  margin-top: 16px;
+  margin-left: 82%;
+  
+  
+}
+.contenido {
+  margin-top: -50px;
+  width: auto;
+  height: 646px;
+  text-align: center;
+  background: #ededed;
+  img {
+    width: 328px;
+    height: 250px;
+  }
+}
+.caract {
+  height: auto;
+  width: 328px;
+  background: #ffffff;
+  border-radius: 11px;
+  position: relative;
+  top: 6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 40px;
+
+  h3 {
+    margin-top: 24px;
+    font-size: 18px;
+    font-weight: bold;
+    font-weight: "Roboto Condensed";
+  }
+}
+.opcion1 {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  img {
+    text-align: left;
+    height: 30px;
+    width: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+  }
+  p {
+    margin: auto;
+    margin-left: -100px;
+    text-align: left;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+}
+hr {
+  width: 90%;
+}
+.terminos-y-condiciones {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 30px;
+  img {
+    text-align: left;
+    height: 35px;
+    width: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+  }
+  p {
+    margin: auto;
+    margin-left: -100px;
+    text-align: left;
+    margin-right: 8px;
+    font-size: 12px;
+  }
+}
+.boton {
+  width: 136px;
+  height: 40px;
+  background: #dd141d;
+  color: #ffffff;
+  border-radius: 50px;
+  border-color: #dd141d;
+  position: relative;
+  margin: auto;
+  margin-top: -160px;
+  display: grid;
+  padding-top: 10px;
+}
+
+@media screen and  (max-width: 376) {
+  .pag{
+    width: 375px;
+    height: 646px;
+    top: 0px;
+    left: 0px;
+  }
+}

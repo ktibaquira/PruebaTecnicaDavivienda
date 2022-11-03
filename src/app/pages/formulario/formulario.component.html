@@ -1,0 +1,162 @@
+<div class="contenedor">
+  <img class="ayuda" src="../../../assets/Img/Grupo 17268.png" alt="" />
+  <p>Ingrese los siguientes datos</p>
+  <form #formula="ngForm">
+    <!--nombre-->
+
+    <mat-form-field class="example-full-width" appearance="standard">
+      <mat-label class="texto">Escriba su nombre completo</mat-label>
+      <input
+        class="example-full-width"
+        matInput
+        type="text"
+        placeholder="Ingrese el nombre"
+        required="true"
+        #nombre="ngModel"
+        [(ngModel)]="formulario.nombre"
+        name="nombre"
+        id="nombre"
+      />
+    </mat-form-field>
+
+    <!--menu-->
+    <mat-form-field class="example-full-width" appearance="standard" required>
+      <mat-label class="texto">Seleccione tipo de documento</mat-label>
+
+      <mat-select>
+        <mat-option value="one">Cédula de ciudadania</mat-option>
+        <mat-option value="two">Tarjeta de identidad</mat-option>
+        <mat-option value="three">Cédula de extranjería</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!--numero del documento-->
+    <mat-form-field class="example-full-width" appearance="standard">
+      <mat-label class="texto">Escriba número de documento</mat-label>
+      <input
+        matInput
+        type="number"
+        required
+        placeholder="Ingrese el número"
+        #documento="ngModel"
+        [(ngModel)]="formulario.numeroDocumento"
+        name="documento"
+        id="documento"
+      />
+    </mat-form-field>
+
+    <!--ciudad-->
+    <mat-form-field class="example-full-width" appearance="standard">
+      <mat-label class="texto">Escriba ciudad o municipio</mat-label>
+      <input
+        matInput
+        type="text"
+        required
+        placeholder="Ingrese el nombre"
+        #ciudad="ngModel"
+        [(ngModel)]="formulario.ciudad"
+        name="ciudad"
+        id="ciudad"
+      />
+    </mat-form-field>
+
+    <!--direccion-->
+    <div class="direccion">
+      <div class="contenido">
+        <h2 class="texto">¿Cuál es su direccion?</h2>
+        <mat-form-field appearance="standard" required>
+          <mat-label>Seleccione</mat-label>
+          <mat-select>
+            <mat-option value="one">Autopista</mat-option>
+            <mat-option value="two">Avenida</mat-option>
+            <mat-option value="three">Avenida calle</mat-option>
+            <mat-option value="four">Av. carretera</mat-option>
+            <mat-option value="five">calle</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="op" appearance="standard">
+          <input
+            matInput
+            required
+            type="number"
+            #numeroCalleCarrera="ngModel"
+            [(ngModel)]="formulario.numeroCalleCarrera"
+            name="numeroCalleCarrera"
+            id="numeroCalleCarrera"
+          />
+        </mat-form-field>
+        #
+        <mat-form-field class="op" appearance="standard">
+          <input
+            matInput
+            required
+            type="number"
+            #especificacionCalle="ngModel"
+            [(ngModel)]="formulario.especificacionCalle"
+            name="especificacionCalle"
+            id="especificacionCalle"
+          />
+        </mat-form-field>
+        -
+        <mat-form-field class="op" appearance="standard">
+          <input
+            matInput
+            required
+            type="number"
+            #especificacionCarrera="ngModel"
+            [(ngModel)]="formulario.especificacionCarrera"
+            name="especificacionCarrera"
+            id="especificacionCarrera"
+          />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <!--local-->
+    <mat-form-field class="example-full-width" appearance="standard">
+      <mat-label class="texto">Local/Tienda/Barrio/Otro</mat-label>
+      <input matInput type="text" placeholder="Opcional" />
+    </mat-form-field>
+  </form>
+  <!--numero telefonico-->
+  <mat-form-field class="example-full-width" appearance="standard">
+    <mat-label class="texto">Número de celular</mat-label>
+    <input
+      matInput
+      type="text"
+      required
+      maxlength="10"
+      placeholder="Escriba el número"
+      #celular="ngModel"
+      [(ngModel)]="formulario.numeroCelular"
+    />
+  </mat-form-field>
+  <div *ngIf="validado() === '3'">
+    <mat-error>El contacto debe iniciar con el número 3</mat-error>
+  </div>
+  <div *ngIf="validado() === 'letra'">
+    <mat-error>El contacto debe ser numérico</mat-error>
+  </div>
+  <div *ngIf="valid === true; else elseBlock">
+    <button
+      [disabled]="formula.invalid"
+      mat-raised-button
+      class="boton"
+      type="submit"
+      [class.valida]="formula.valid"
+      (click)="guardar()"
+    >
+      Crear
+    </button>
+  </div>
+  <ng-template #elseBlock>
+    <button
+      [disabled]="true"
+      mat-raised-button
+      class="boton"
+      type="submit"
+    >
+      Crear
+    </button>
+  </ng-template>
+</div>

@@ -1,0 +1,124 @@
+.contenedor {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  margin-top: 104px;
+  width: 343px;
+  height: 635px;
+  margin: auto;
+  border-radius: 8px;
+  opacity: 1;
+  padding-left: 16px;
+  background: var(#ffffff) 0% 0% no-repeat padding-box;
+  box-shadow: inset 0px 3px 6px #8b8b8b1a;
+  border-radius: 8px;
+
+  .ayuda {
+    position: static;
+    margin-left: 280px;
+  }
+
+  p {
+    //background: gold;
+    margin-top: -50px;
+    left: 32px;
+    width: 256px;
+    height: 24px;
+    /* UI Properties */
+    color: var(--negro);
+    text-align: left;
+    font: normal normal bold 18px/22px Roboto Condensed;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    font-size: 18px;
+  }
+  form {
+    width: 311px !important;
+
+    input {
+      color: #000000;
+      font-weight: bold;
+    }
+    mat-select {
+      color: #000000;
+      font-weight: bold;
+    }
+  }
+}
+
+.example-full-width {
+  width: 100%;
+  color: #bcbcbc;
+}
+
+::ng-deep .mat-select-arrow {
+  border-left: 15px solid transparent !important;
+  border-right: none !important;
+  border-top: 15px solid transparent !important;
+  border-image-source: url("../../../assets/Iconos/IconoR_16Abajo.png") !important;
+  border-image-repeat: stretch !important;
+}
+
+.texto {
+  top: 168px;
+  left: 32px;
+  width: 180px;
+  height: 21px;
+  /* UI Properties */
+  color: var(--negro);
+  text-align: left;
+  font: normal normal normal 16px/24px Roboto Condensed;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.contenido {
+  //background: #25c6e2;
+
+  mat-form-field {
+    width: 35%;
+    margin-left: 3px;
+  }
+  .op {
+    //background: #e27125;
+    width: 15%;
+    margin-left: 6px;
+  }
+}
+
+.boton {
+  display: grid;
+  margin: auto;
+  width: 136px;
+  height: 40px;
+  background: #575757;
+  color: #ffffff;
+  border-radius: 20px;
+  /* UI Properties */
+  padding-top: 10px;
+  //color: var(--blanco);
+  text-align: center;
+  font: normal normal normal 16px/11px Roboto Condensed;
+  transition: all linear 0.5s;
+
+  &.valida {
+    background-color: red;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 191) and (max-width: 375) {
+  .contenedor {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    top: 104px;
+    width: 343px;
+    height: auto;
+    margin: auto;
+    border-radius: 8px;
+    opacity: 1;
+    left: 16px;
+    background: var(#ffffff) 0% 0% no-repeat padding-box;
+    box-shadow: inset 0px 3px 6px #8b8b8b1a;
+    border-radius: 8px;
+  }
+}
